@@ -12,7 +12,7 @@
 
 ## Solution ##
   > Online application that will automate entry generation and give updates about the parade and events.
-## Quote from You ##
+## Quote ##
   > I am really excited to see how this software will positively impact the entry generation process for those entering the parade as well as those handling the processing. What was once a process full of hangups, mishaps, and miscommunication will now be on a path to smooth and easy transactions and an overall better parade experience for all. 
 
 ## How to Get Started ##
