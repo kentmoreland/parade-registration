@@ -1,6 +1,9 @@
 {
   "name": "parade-registration",
   "version": "0.0.1",
+  "scripts": {
+    "start": "server/server.js,"
+  },
   "dependencies": {
     "angular-resource": "^1.5.8",
     "body-parser": "^1.15.2",
