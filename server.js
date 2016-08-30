@@ -25,13 +25,22 @@ app.use(bodyParser.json());
 //set up the port allow for deployment
 var port = process.env.PORT || 3000;
 // REST API
-app.get("/api/entries/", entryController.list);
-app.post("/api/entries/", entryController.create);
 
 // client side routing
 app.get("/", function(req, res){
   res.sendFile(__dirname +  "/client/index.html");
 });
+
+app.get("/api/entries/", function(err){
+  if(err){
+    console.log(err)
+  };
+  console.log("got the route")
+});
+
+// app.get("/api/entries/", entryController.list);
+app.post("/api/entries/", entryController.create);
+
 
 app.use(express.static(__dirname + '/client'));
 
