@@ -1,5 +1,4 @@
 var express = require("express");
-// var path = require('path');
 var bodyParser = require('body-parser');
 var router = express.Router();
 var Entry = require('./server/models/entries');
@@ -24,15 +23,16 @@ app.use(bodyParser.json());
 
 //set up the port allow for deployment
 var port = process.env.PORT || 3000;
-// REST API
 
 // client side routing
 app.get("/", function(req, res){
   res.sendFile(__dirname +  "/client/index.html");
 });
 
+// REST API
 app.get("/api/entries/", entryController.list);
 app.post("/api/entries/", entryController.create);
+
 
 
 app.use(express.static(__dirname + '/client'));
