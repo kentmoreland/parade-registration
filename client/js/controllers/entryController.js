@@ -1,5 +1,5 @@
 angular.module('paradeEntry', ['ngResource']).controller('entryController', ['$scope', '$resource', function($scope, $resource){
-  var Entry = $resource('/api/entries');
+  var Entry = $resource('/api/entries/');
 
   Entry.query(function(results){
     $scope.entries = results;
