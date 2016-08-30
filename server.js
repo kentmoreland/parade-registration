@@ -9,7 +9,7 @@ var app = express();
 //****database***
 var mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost/paradeApp')
-mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost/27017/paradeApp';
+mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/27017/paradeApp';
 mongoose.connect(mongoURI);
 
 var db = mongoose.connection;
