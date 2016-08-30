@@ -19,7 +19,7 @@ var port = process.env.PORT || 3000;
 
 //client side routing
 app.get("/", function(req, res){
-  res.sendFile(path.join(__dirname, '../', "client/index.html"));
+  res.sendFile(__dirname + "client/index.html");
 });
 
 app.use(express.static('client'));
