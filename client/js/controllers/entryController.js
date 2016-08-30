@@ -19,6 +19,7 @@ paradeapp.controller('entryController', ['$scope', '$resource', function($scope,
   }
 
 }]);
+
 paradeapp.config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/home');
   $stateProvider
@@ -28,7 +29,18 @@ paradeapp.config(function($stateProvider, $urlRouterProvider){
     })
 
     .state('about', {
+      url: '/about',
+      templateUrl: 'views/partials/about.html'
+    })
 
+    .state('form', {
+      url: '/form',
+      templateUrl: 'views/partials/entryForm.html'
+    })
+
+    .state('list', {
+      url: '/list',
+      templateUrl: 'views/partials/entryList.html'
     })
 
 });

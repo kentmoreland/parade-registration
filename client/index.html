@@ -7,26 +7,15 @@
 <nav>
   <ul>
     <li><a ui-sref="home">Home</a></li>
-    <li><a href="about">About</a></li>
+    <li><a ui-sref="about">About</a></li>
+    <li><a ui-sref="list">Entries</a></li>
+    <li><a ui-sref="form">Register</a></li>
   </ul>
 </nav>
-  <h1>Parade Registration</h1>
-  <section ng-controller="entryController">
-    <form ng-submit="submitEntry()">
-    <input type="text" ng-model="entryName" placeholder="name">
-    <button type="submit">Submit Entry</button>
-    </form>
 
   <div ui-view></div>
-  </section>
 
-  <aside ng-controller="entryController">
-    <ul>
-      <li ng-repeat="entry in entries">
-        {{entry.name}}
-      </li>
-    </ul>
-  </aside>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-resource.js"
