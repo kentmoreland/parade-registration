@@ -33,8 +33,8 @@ app.get("/", function(req, res){
 app.use(express.static(__dirname + '/client'));
 
 // REST API
-app.get("/api/entries", entryController.list);
-app.post("/api/entries", entryController.create);
+app.get("/api/entries/", entryController.list);
+app.post("/api/entries/", entryController.create);
 
 app.listen(port, function(){
   console.log("Strong Work!! Your server is listening on port " + port + "...");
