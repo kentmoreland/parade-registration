@@ -1,4 +1,6 @@
-angular.module('paradeEntry', ['ngResource']).controller('entryController', ['$scope', '$resource', function($scope, $resource){
+var paradeapp = angular.module('paradeEntry', ['ngResource', 'ui.router'])
+
+paradeapp.controller('entryController', ['$scope', '$resource', function($scope, $resource){
   var Entry = $resource('/api/entries/');
 
   Entry.query(function(results){
@@ -17,4 +19,17 @@ angular.module('paradeEntry', ['ngResource']).controller('entryController', ['$s
   }
 
 }]);
+paradeapp.config(function($stateProvider, $urlRouterProvider){
+  $urlRouterProvider.otherwise('/home');
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: 'views/partials/home.html'
+    })
+
+    .state('about', {
+
+    })
+
+});
 
