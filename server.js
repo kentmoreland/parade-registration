@@ -8,7 +8,9 @@ var app = express();
 
 //****database***
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/paradeApp')
+// mongoose.connect('mongodb://localhost/paradeApp')
+mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost/paradeApp';
+mongoose.connect(mongoURI);
 
 //allows us to get the data from a POST Request
 app.use(bodyParser.urlencoded({extended: true}));
