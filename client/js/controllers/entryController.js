@@ -12,9 +12,22 @@ paradeapp.controller('entryController', ['$scope', '$resource', function($scope,
   $scope.submitEntry = function(){
     var entry = new Entry();
     entry.name = $scope.entryName;
+    entry.email = $scope.email;
+    entry.organization  = $scope.organization;
+    entry.category = $scope.category;
+    entry.contact = $scope.contact;
+    entry.number = $scope.number;
+    entry.description = $scope.description;
+
     entry.$save(function(result){
       $scope.entries.push(result);
       $scope.entryName = '';
+      $scope.email = '';
+      $scope.organization = '';
+      $scope.contact = '';
+      $scope.number = '';
+      $scope.category = '';
+      $scope.description = '';
     })
   }
 
