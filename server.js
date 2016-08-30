@@ -27,10 +27,10 @@ var port = process.env.PORT || 3000;
 
 //client side routing
 app.get("/", function(req, res){
-  res.sendFile(__dirname +  "client/index.html");
+  res.sendFile(__dirname +  "/client/index.html");
 });
 
-app.use(express.static(__dirname + 'client'));
+app.use(express.static(__dirname + '/client'));
 
 // REST API
 app.get("/api/entries", entryController.list);
