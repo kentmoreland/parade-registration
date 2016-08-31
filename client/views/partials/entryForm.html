@@ -1,17 +1,24 @@
   <section ng-controller="entryController">
     <form ng-submit="submitEntry()">
-    <input type="text" ng-model="entryName"
-    placeholder="name">
+      <div>
+        <div class="form-group">
+          <input type="text" ng-model="entryName"
+          placeholder="name">
+        </div>
+        <div class="form-group">
+          <input type="email" ng-model="email" placeholder="email">
+        </div>
+        <div class="form-group">
+          <select name="category" ng-model="category">
+            <option value="">---Please select---</option>
+            <option value="float">Float</option>
+            <option value="vehicle">Vehicle</option>
+            <option value="animal">Animals</option>
+          </select>
+        </div>
 
-    <input type="email" ng-model="email" placeholder="email">
 
-    <select name="category" ng-model="category">
-      <option value="">---Please select---</option>
-      <option value="float">Float</option>
-      <option value="vehicle">Vehicle</option>
-      <option value="animal">Animals</option>
-    </select>
-
-    <button type="submit">Submit Entry</button>
+        <button class="btn btn-default" type="submit">Submit Entry</button>
+      </div>
     </form>
   </section>

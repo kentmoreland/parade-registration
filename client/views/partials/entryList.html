@@ -1,8 +1,8 @@
   <section ng-controller="entryController">
-    <ul>
-      <li ng-repeat="entry in entries">
-        {{entry.name}}
-        {{entry.category}}
+    <ul class="list-unstyled entries">
+      <li class="list" ng-repeat="entry in entries">
+        Name: {{entry.name}} <br>
+        Category: {{entry.category}}
       </li>
     </ul>
   </section>
